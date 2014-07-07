@@ -1,14 +1,48 @@
 # Moderne
 
+
 A [Ghost](http://github.com/tryghost/ghost/) theme.
 
-## Copyright & License
+![](https://raw.githubusercontent.com/itsnydell/moderne/master/screenshot.jpg)
 
-Copyright (c) 2014 Brandon Nydell - Released under the MIT License.
+## Features
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* Responsive theme (mobile friendly)
+* Large post header images
+* Disqu Comments
+* Author Information, including picture.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+This theme was inspired by the [Media Temple Blog](mediatemple.net/blog/) for the post page and the rest of the theme was designed to around that. 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Please let me know if you use this theme so I could feature you as an live blog!
+
+### Disqus
+
+Disqus comments are included by default. You will need to follow the instructions below to tailor it to your site, else you will be using the example Disqus comments which is not blog specific.
+
+#### Enable for your site:
+
+Find the following line in post.hbs line: 
+
+```
+var disqus_shortname = 'example';
+```
+
+Then replace "example" with your Disqus information!
+
+#### Remove Disqus
+
+Find and remove the following from the post.hbs file:
+
+```
+<section class="post-comments">.....</section>
+```
+
+
+## More Screenshots
+
+#### Post Page
+
+![](https://raw.githubusercontent.com/itsnydell/moderne/master/screenshot-post.jpg)
+
+![](https://raw.githubusercontent.com/itsnydell/moderne/master/screenshot-post-lower.jpg)
