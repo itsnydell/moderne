@@ -1,0 +1,982 @@
+/* ==========================================================================
+   Icons - Sets up the icon font and respective classes
+   ========================================================================== */
+/* Import the font file with the icons in it */
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Apply these base styles to all icons */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Each icon is created by inserting the corret character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+  content: "\e000";
+}
+.icon-feed:before {
+  content: "\e001";
+}
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+}
+.icon-google-plus:before {
+  content: "\e003";
+}
+.icon-facebook:before {
+  content: "\e004";
+}
+/* ==========================================================================
+   General - Setting up some base styles
+   ========================================================================== */
+html {
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%;
+  font-weight: 300;
+  background: #000000;
+}
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: 'Open Sans', serif;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  color: #3A4145;
+}
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-weight: 600;
+}
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px;
+}
+h2 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px;
+}
+h3 {
+  font-size: 3.5rem;
+}
+h4 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2.5rem;
+}
+h6 {
+  font-size: 2rem;
+}
+a {
+  color: #57A3E8;
+  transition: color ease 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  color: #3986AA;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #50585D;
+}
+p,
+ul,
+ol,
+dl {
+  margin: 1.6em 0;
+}
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0.4em 0;
+}
+ol li ol {
+  list-style-type: upper-alpha;
+}
+ol li ol li ol {
+  list-style-type: decimal;
+}
+ol li ol li ol li ol {
+  list-style-type: upper-alpha;
+}
+dl dt {
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+dl dd {
+  margin-left: 200px;
+  margin-bottom: 1em;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #efefef;
+  margin: 3.2em 0;
+  padding: 0;
+}
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em 0;
+  border-left: #4a4a4a 0.5em solid;
+  font-style: italic;
+  background: #f5f5f5;
+  padding: 20px;
+}
+blockquote p {
+  margin: 0.8em 0;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc;
+}
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+  font-weight: normal;
+}
+mark {
+  background-color: #ffc336;
+}
+code,
+tt {
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  border: 1px solid #E3EDF3;
+  background: #F7FAFB;
+  border-radius: 2px;
+}
+pre {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  border: 1px solid #E3EDF3;
+  width: 100%;
+  padding: 10px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px;
+}
+pre code,
+tt {
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
+}
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef;
+}
+table th {
+  color: #000;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #efefef;
+}
+table table table {
+  background-color: #fff;
+}
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
+}
+iframe,
+.fluid-width-video-wrapper {
+  display: block;
+  margin: 1.6em 0;
+}
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+  margin: 0;
+}
+/* ==========================================================================
+   Utilities - These things get used a lot
+   ========================================================================== */
+/* Clears shit */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* Hides shit */
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
+}
+/* Centres vertically yo. (IE8+) */
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+main {
+  background: #ffffff;
+}
+.pane {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.strip {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 50px;
+}
+/* ==========================================================================
+   General - The main styles for the the theme
+   ========================================================================== */
+article {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+/* ==========================================================================
+   Main Page - The main listing of posts
+   ========================================================================== */
+.post-preview {
+  margin: 0 auto 100px;
+}
+.post-preview .post-image {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+.post-preview:last-child {
+  margin-bottom: 0;
+}
+.post-preview .post-header {
+  padding: 20px 0 0 0;
+}
+.post-preview .post-header h2 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #3A4145;
+  transition: all 0.2s ease, top 0.3s ease;
+}
+.post-preview .post-header h2:hover {
+  color: #57A3E8;
+  transition: all 0.2s ease, top 0.3s ease;
+}
+.post-preview .post-header .post-meta {
+  color: #909A9E;
+  font-size: 1.5rem;
+}
+.post-preview .post-excerpt {
+  padding: 20px 0 0 0;
+}
+.post-preview .post-excerpt p {
+  margin: 0;
+  padding: 0;
+}
+/* ==========================================================================
+   Single Post - When you click on an individual post
+   ========================================================================== */
+.single-post .post-image,
+.page .post-image {
+  height: 600px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.single-post .post-header,
+.page .post-header {
+  margin-bottom: 50px;
+}
+.single-post .post-header h2,
+.page .post-header h2 {
+  margin-bottom: 10px;
+}
+.single-post .post-header .post-meta,
+.page .post-header .post-meta {
+  color: #909A9E;
+  font-size: 1.5rem;
+}
+.single-post .post-body,
+.page .post-body {
+  position: relative;
+}
+.single-post .post-content,
+.page .post-content {
+  max-width: 700px;
+}
+.single-post .post-content p:first-of-type,
+.page .post-content p:first-of-type {
+  margin-top: 0;
+}
+.single-post .post-content img,
+.page .post-content img {
+  width: 100%;
+}
+.single-post .post-footer,
+.page .post-footer {
+  max-width: 700px;
+  font-size: 1.75rem;
+  margin: 50px 0 0;
+  color: #A1B2BB;
+}
+.single-post .post-footer .meta,
+.page .post-footer .meta {
+  float: left;
+}
+.single-post .post-footer .meta .author,
+.page .post-footer .meta .author {
+  margin-right: 20px;
+  font-weight: 700;
+}
+.single-post .post-footer .share,
+.page .post-footer .share {
+  float: right;
+}
+.single-post .post-footer .share a,
+.page .post-footer .share a {
+  margin: 0 2px;
+  color: #839aa6;
+}
+.single-post .post-footer .share a:hover,
+.page .post-footer .share a:hover {
+  color: #526671;
+}
+.single-post .post-footer .share a:first-of-type,
+.page .post-footer .share a:first-of-type {
+  margin-left: 10px;
+}
+.single-post .post-footer .share a:last-of-type,
+.page .post-footer .share a:last-of-type {
+  margin-right: 0;
+}
+.single-post .post-footer hr,
+.page .post-footer hr {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.single-post .post-author,
+.page .post-author {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.single-post .post-author h3,
+.page .post-author h3 {
+  font-size: 3rem;
+  display: block;
+  height: 50px;
+  margin: 0;
+  font-weight: 300;
+}
+.single-post .post-author .author,
+.page .post-author .author {
+  position: relative;
+}
+.single-post .post-author .author .portrait,
+.page .post-author .author .portrait {
+  width: 100%;
+  line-height: 0;
+}
+.single-post .post-author .author .portrait img,
+.page .post-author .author .portrait img {
+  width: 100%;
+}
+.single-post .post-author .author .bio,
+.page .post-author .author .bio {
+  padding: 35px 40px;
+  background: #000000;
+  color: #ffffff;
+}
+.single-post .post-author .author .bio h4,
+.page .post-author .author .bio h4 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.single-post .post-author .author .bio p,
+.page .post-author .author .bio p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #979DA0;
+  margin-bottom: 10px;
+}
+.single-post .post-author .author .bio .location,
+.page .post-author .author .bio .location {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.single-post .post-author .author .bio .website,
+.page .post-author .author .bio .website {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.single-post .post-comments,
+.page .post-comments {
+  max-width: 700px;
+}
+.single-post .post-comments hr,
+.page .post-comments hr {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.page .post-content {
+  max-width: none;
+}
+/* ==========================================================================
+   Tag archive
+   ========================================================================== */
+.tag {
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 4rem;
+}
+/* ==========================================================================
+   Third Party Elements - Embeds from other services
+   ========================================================================== */
+/* Github */
+.gist table {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.gist .line-number {
+  min-width: 25px;
+  font-size: 1.1rem;
+}
+/* ==========================================================================
+   Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
+.pagination {
+  position: relative;
+  margin: 4rem auto;
+  font-size: 1.3rem;
+  color: #9EABB3;
+  text-align: center;
+  margin: 0 auto;
+}
+.pagination a {
+  color: #5A6E7A;
+}
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 0 15px;
+  text-decoration: none;
+  transition: border ease 0.3s;
+  background: #EFF3F5;
+  padding: 2px 10px;
+}
+.older-posts {
+  right: 0;
+}
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+}
+.newer-posts {
+  left: 0;
+}
+.older-posts:hover,
+.newer-posts:hover {
+  background: #C8D5DB;
+}
+/* ==========================================================================
+   Header - The top of the main page
+   ========================================================================== */
+.site-head {
+  position: relative;
+  height: 60%;
+  max-height: 400px;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  padding: 50px 0;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.site-head .verticle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.site-head .blog-logo {
+  max-height: 100px;
+  display: block;
+  margin: 0 0 20px 0;
+}
+.site-head .blog-logo img {
+  max-height: 100px;
+}
+.site-head h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+}
+.site-head h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+}
+/* ==========================================================================
+   Page Header - The top of pages
+   ========================================================================== */
+.site-page-head {
+  position: relative;
+  height: 200px;
+  background: #000000;
+  display: table;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s ease, top 0.3s ease;
+}
+.site-page-head .verticle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.site-page-head .blog-title-link {
+  max-height: 120px;
+  display: inline-block;
+  vertical-align: top;
+  color: #ffffff;
+  padding: 20px;
+}
+.site-page-head .blog-title-link img {
+  max-height: 80px;
+  margin: 0 20px 0 0;
+}
+.site-page-head .blog-title-link h1 {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  height: 80px;
+  vertical-align: top;
+  line-height: 80px;
+  transition: all 0.2s ease, top 0.3s ease;
+}
+/* ==========================================================================
+   Footer - The bottom of every page
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  margin: 0;
+  padding: 80px 0;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #81919B;
+  text-align: center;
+  background: #F0F2F3;
+}
+.site-footer a {
+  color: #4F5E68;
+}
+.site-footer a:hover {
+  color: #1E9BD6;
+}
+.poweredby .icon-ghost {
+  font-weight: 700;
+  text-decoration: none;
+}
+.poweredby .icon-ghost:hover {
+  text-decoration: none;
+}
+.poweredby .icon-ghost:before {
+  font-size: 1rem;
+  margin-right: 0.2em;
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.0rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 2.0rem;
+  }
+  article {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .site-page-head {
+    height: 150px;
+  }
+  .site-page-head .blog-title-link h1 {
+    font-size: 3rem;
+  }
+  /* Main Page */
+  .post-preview .post-image {
+    height: 300px;
+  }
+  /* Post Page */
+  .single-post .post-image,
+  .page .post-image {
+    height: 450px;
+  }
+  .single-post .post-header h2,
+  .page .post-header h2 {
+    font-size: 4rem;
+  }
+  .single-post .post-body,
+  .page .post-body {
+    padding-right: 350px;
+  }
+  .single-post .post-author h4,
+  .page .post-author h4 {
+    font-size: 2.5rem;
+    height: 40px;
+  }
+  .page .post-body {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .strip {
+    max-width: 700px;
+  }
+  /* Post Page */
+  .single-post .post-image,
+  .page .post-image {
+    height: 400px;
+  }
+  .single-post .post-body,
+  .page .post-body {
+    padding-right: 0;
+  }
+  .single-post .post-footer .author,
+  .page .post-footer .author {
+    display: none;
+  }
+  .single-post .post-footer hr,
+  .page .post-footer hr {
+    display: block;
+  }
+  .single-post .post-author,
+  .page .post-author {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+  }
+  .single-post .post-author .author .portrait,
+  .page .post-author .author .portrait {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .single-post .post-author .author .bio,
+  .page .post-author .author .bio {
+    height: 220px;
+    padding: 40px 40px 40px 340px;
+  }
+  .single-post .post-author .author .bio h4,
+  .page .post-author .author .bio h4 {
+    margin-bottom: 15px;
+  }
+  .single-post .post-author .author .bio p,
+  .page .post-author .author .bio p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .single-post .post-comments hr,
+  .page .post-comments hr {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .pane {
+    padding: 50px 0;
+  }
+  .strip {
+    max-width: 800px;
+    padding: 0;
+  }
+  h1,
+  h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 2.3rem;
+  }
+  .site-head {
+    height: auto;
+    max-height: auto;
+    padding: 50px 0;
+  }
+  .site-head h1 {
+    font-size: 3rem;
+  }
+  .site-head h2 {
+    font-size: 2.0rem;
+  }
+  .site-page-head {
+    height: 100px;
+  }
+  .site-page-head .blog-title-link img {
+    margin: 0;
+  }
+  .site-page-head .blog-title-link h1 {
+    display: none;
+  }
+  .site-footer {
+    padding: 60px 0;
+  }
+  /* Main Page */
+  .post-preview {
+    margin: 0 auto 60px;
+    padding: 0 40px;
+  }
+  .post-preview .post-image {
+    height: 300px;
+  }
+  .post-preview .post-header h2 {
+    margin-bottom: 8px;
+    font-size: 2.8rem;
+  }
+  .post-preview .post-excerpt {
+    padding: 10px 0 0 0;
+  }
+  /* Post Page */
+  .single-post .post-image,
+  .page .post-image {
+    height: 250px;
+  }
+  .single-post .post-header h2,
+  .page .post-header h2 {
+    font-size: 2.8rem;
+  }
+  .single-post .post-header,
+  .page .post-header,
+  .single-post .post-content,
+  .page .post-content,
+  .single-post .post-footer,
+  .page .post-footer,
+  .single-post .post-comments,
+  .page .post-comments {
+    padding: 0 50px;
+  }
+  .single-post .post-author h3,
+  .page .post-author h3 {
+    padding: 0 50px;
+  }
+  .single-post .post-author .author .portrait,
+  .page .post-author .author .portrait {
+    display: none;
+  }
+  .single-post .post-author .author .bio,
+  .page .post-author .author .bio {
+    height: auto;
+    padding: 40px 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pane {
+    padding: 20px 0;
+  }
+  hr {
+    margin: 30px 0;
+  }
+  .site-head {
+    padding: 40px 0;
+  }
+  .site-head h1 {
+    font-size: 3rem;
+  }
+  .site-head h2 {
+    font-size: 2.0rem;
+  }
+  .site-footer {
+    padding: 40px 0;
+  }
+  /* Main Page */
+  .post-preview {
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+  .post-preview:last-child {
+    margin-bottom: 20px;
+  }
+  .post-preview .post-image {
+    height: 200px;
+  }
+  .post-preview .post-header h2 {
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+  .post-preview .post-excerpt {
+    padding: 10px 0 0 0;
+  }
+  /* Post Page */
+  .single-post .post-image,
+  .page .post-image {
+    height: 200px;
+  }
+  .single-post .post-header,
+  .page .post-header,
+  .single-post .post-content,
+  .page .post-content,
+  .single-post .post-footer,
+  .page .post-footer {
+    margin-bottom: 40px;
+  }
+  .single-post .post-header,
+  .page .post-header,
+  .single-post .post-content,
+  .page .post-content,
+  .single-post .post-footer,
+  .page .post-footer,
+  .single-post .post-comments,
+  .page .post-comments {
+    padding: 0 20px;
+  }
+  .single-post .post-author h3,
+  .page .post-author h3 {
+    padding: 0 20px;
+  }
+  .single-post .post-author .author .portrait,
+  .page .post-author .author .portrait {
+    display: none;
+  }
+  .single-post .post-author .author .bio,
+  .page .post-author .author .bio {
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point.
+   ========================================================================== */
