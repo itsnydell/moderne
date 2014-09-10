@@ -28,7 +28,7 @@
 
         // Setup post images
         $(".post-preview").find(".post-image").each(function() {
-          if($("img").length != 0){
+          if($(this).find("img").length != 0){
             var postImage = $(this).find("img").attr("src");
             $(this).html("");
             $(this).css("background-image","url('"+postImage+"')")
