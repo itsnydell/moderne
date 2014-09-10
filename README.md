@@ -16,6 +16,10 @@ This theme was inspired by the [Media Temple Blog](mediatemple.net/blog/) for th
 
 Please let me know if you use this theme so I could feature you as an live blog!
 
+### Post Header Images
+
+To enable post header images, you must place the desired image as the FIRST item in a blog post. No text should be above the image. This will enable large post header images as seen in the screenshots. 
+
 ### Disqus
 
 Disqus comments are included by default. You will need to follow the instructions below to tailor it to your site, else you will be using the example Disqus comments which is not blog specific.
