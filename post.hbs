@@ -3,6 +3,9 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
 <header class="site-page-head">
     <div class="verticle">
         <a class="blog-title-link" href="{{@blog.url}}">
@@ -18,11 +21,8 @@
 
     <article class="single-post {{post_class}}">
         
-        <div class="post-image">
+        <div class="post-image {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
         </div>
-
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
 
             <div class="pane">
         
@@ -48,13 +48,13 @@
                             </section>
                             <section class="share">
                                 <span>Share: </span>
-                                <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-									<i class="fa fa-twitter"></i>                                   
-                                </a>
                                 <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                                     <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                    <i class="fa fa-twitter"></i>
                                 </a>
                                 <a href="https://plus.google.com/share?url={{url absolute="true"}}"
                                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
@@ -65,18 +65,23 @@
                             <hr>
                         </footer>
                         
+                        {{! Everything inside the #author tags pulls data from the author }}
+                        {{#author}}
+                        
                         <section class="post-author">
                             <h3>Author</h3>
                             <div class="author">
-                                <div class="portrait"><img src="{{author.image}}" alt="Author"></div>
+                                <div class="portrait"><img src="{{image}}" alt="Author"></div>
                                 <section class="bio">
-                                    <h4>{{author.name}}</h4>
-                                    <p>{{author.bio}}</p>
-                                    {{#if author.location}}<span class="location">{{author.location}}</span>{{/if}}
-                                    {{#if author.website}}<span class="website"><a href="{{author.website}}">{{author.website}}</a></span>{{/if}}
+                                    <h4><a href="{{url}}">{{name}}</a></h4>
+                                    <p>{{bio}}</p>
+                                    {{#if location}}<span class="location">{{author.location}}</span>{{/if}}
+                                    {{#if website}}<span class="website"><a href="{{website}}">{{website}}</a></span>{{/if}}
                                 </section>
                             </div>
                         </section>
+                        
+                        {{/author}}
                         
                         <section class="post-comments">
                             <hr>
@@ -99,8 +104,8 @@
                 </div>
             </div>
 
-        {{/post}}
-
     </article>
 
 </main>
+
+{{/post}}
