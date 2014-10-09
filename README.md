@@ -18,7 +18,7 @@ Please let me know if you use this theme so I could feature you as an live blog!
 
 ### Post Header Images
 
-To enable post header images, use the built in post images feature. 
+To enable post header images, use the built-in post images feature. 
 
 ### Disqus
 
