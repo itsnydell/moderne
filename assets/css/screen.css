@@ -333,6 +333,13 @@ main {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.author-page .pane {
+  padding-top: 40px;
+}
+.author-page h2 {
+  padding-bottom: 20px;
+  text-align: center;
+}
 .strip {
   max-width: 1100px;
   margin: auto;
@@ -356,19 +363,31 @@ article {
   background-position: center;
   background-size: cover;
 }
+.post-preview .post-image.no-cover {
+  display: none;
+}
+.post-preview .author-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 9px;
+  border-radius: 100%;
+}
 .post-preview:last-child {
   margin-bottom: 0;
 }
 .post-preview .post-header {
   padding: 20px 0 0 0;
 }
-.post-preview .post-header h2 {
+.post-preview .post-header h2,
+.post-preview .post-header h3 {
   margin-bottom: 10px;
   font-size: 3rem;
   color: #3A4145;
   transition: all 0.2s ease, top 0.3s ease;
 }
-.post-preview .post-header h2:hover {
+.post-preview .post-header h2:hover,
+.post-preview .post-header h3:hover {
   color: #57A3E8;
   transition: all 0.2s ease, top 0.3s ease;
 }
@@ -383,97 +402,146 @@ article {
   margin: 0;
   padding: 0;
 }
+.author-page .post-preview {
+  margin: 0 auto 50px;
+}
 /* ==========================================================================
    Single Post - When you click on an individual post
    ========================================================================== */
 .single-post .post-image,
-.page .post-image {
+.page .post-image,
+.author-page .post-image {
   height: 600px;
   overflow: hidden;
   background-position: center;
   background-size: cover;
 }
+.single-post .post-image.no-cover,
+.page .post-image.no-cover,
+.author-page .post-image.no-cover {
+  display: none;
+}
+.single-post.author-page .post-header,
+.page.author-page .post-header,
+.author-page.author-page .post-header {
+  margin-bottom: 0;
+}
+.single-post.author-page .post-header h2,
+.page.author-page .post-header h2,
+.author-page.author-page .post-header h2 {
+  margin-bottom: 10px;
+}
 .single-post .post-header,
-.page .post-header {
+.page .post-header,
+.author-page .post-header {
   margin-bottom: 50px;
 }
 .single-post .post-header h2,
-.page .post-header h2 {
+.page .post-header h2,
+.author-page .post-header h2 {
   margin-bottom: 10px;
 }
 .single-post .post-header .post-meta,
-.page .post-header .post-meta {
+.page .post-header .post-meta,
+.author-page .post-header .post-meta {
   color: #909A9E;
   font-size: 1.5rem;
 }
 .single-post .post-body,
-.page .post-body {
+.page .post-body,
+.author-page .post-body,
+.single-post .author-body,
+.page .author-body,
+.author-page .author-body {
   position: relative;
 }
 .single-post .post-content,
-.page .post-content {
+.page .post-content,
+.author-page .post-content,
+.single-post .author-posts,
+.page .author-posts,
+.author-page .author-posts {
   max-width: 700px;
 }
 .single-post .post-content p:first-of-type,
-.page .post-content p:first-of-type {
+.page .post-content p:first-of-type,
+.author-page .post-content p:first-of-type,
+.single-post .author-posts p:first-of-type,
+.page .author-posts p:first-of-type,
+.author-page .author-posts p:first-of-type {
   margin-top: 0;
 }
 .single-post .post-content img,
-.page .post-content img {
+.page .post-content img,
+.author-page .post-content img,
+.single-post .author-posts img,
+.page .author-posts img,
+.author-page .author-posts img {
   width: 100%;
 }
 .single-post .post-footer,
-.page .post-footer {
+.page .post-footer,
+.author-page .post-footer {
   max-width: 700px;
   font-size: 1.75rem;
   margin: 50px 0 0;
   color: #A1B2BB;
 }
 .single-post .post-footer .meta,
-.page .post-footer .meta {
+.page .post-footer .meta,
+.author-page .post-footer .meta {
   float: left;
 }
 .single-post .post-footer .meta .author,
-.page .post-footer .meta .author {
+.page .post-footer .meta .author,
+.author-page .post-footer .meta .author {
   margin-right: 20px;
   font-weight: 700;
 }
 .single-post .post-footer .share,
-.page .post-footer .share {
+.page .post-footer .share,
+.author-page .post-footer .share {
   float: right;
 }
 .single-post .post-footer .share a,
-.page .post-footer .share a {
+.page .post-footer .share a,
+.author-page .post-footer .share a {
   margin: 0 2px;
   color: #839aa6;
 }
 .single-post .post-footer .share a:hover,
-.page .post-footer .share a:hover {
+.page .post-footer .share a:hover,
+.author-page .post-footer .share a:hover {
   color: #526671;
 }
 .single-post .post-footer .share a:first-of-type,
-.page .post-footer .share a:first-of-type {
+.page .post-footer .share a:first-of-type,
+.author-page .post-footer .share a:first-of-type {
   margin-left: 10px;
 }
 .single-post .post-footer .share a:last-of-type,
-.page .post-footer .share a:last-of-type {
+.page .post-footer .share a:last-of-type,
+.author-page .post-footer .share a:last-of-type {
   margin-right: 0;
 }
 .single-post .post-footer hr,
-.page .post-footer hr {
+.page .post-footer hr,
+.author-page .post-footer hr {
   display: none;
   margin-top: 20px;
   margin-bottom: 0;
 }
 .single-post .post-author,
-.page .post-author {
+.page .post-author,
+.author-page .post-author {
   width: 300px;
   position: absolute;
   top: 0;
   right: 0;
 }
 .single-post .post-author h3,
-.page .post-author h3 {
+.page .post-author h3,
+.author-page .post-author h3 {
   font-size: 3rem;
   display: block;
   height: 50px;
@@ -481,60 +549,86 @@ article {
   font-weight: 300;
 }
 .single-post .post-author .author,
-.page .post-author .author {
+.page .post-author .author,
+.author-page .post-author .author {
   position: relative;
 }
 .single-post .post-author .author .portrait,
-.page .post-author .author .portrait {
+.page .post-author .author .portrait,
+.author-page .post-author .author .portrait {
   width: 100%;
   line-height: 0;
 }
 .single-post .post-author .author .portrait img,
-.page .post-author .author .portrait img {
+.page .post-author .author .portrait img,
+.author-page .post-author .author .portrait img {
   width: 100%;
 }
 .single-post .post-author .author .bio,
-.page .post-author .author .bio {
+.page .post-author .author .bio,
+.author-page .post-author .author .bio {
   padding: 35px 40px;
   background: #000000;
   color: #ffffff;
 }
 .single-post .post-author .author .bio h4,
-.page .post-author .author .bio h4 {
+.page .post-author .author .bio h4,
+.author-page .post-author .author .bio h4 {
   font-size: 2.5rem;
   line-height: 3rem;
   margin-bottom: 20px;
   font-weight: 600;
 }
+.single-post .post-author .author .bio h4 a,
+.page .post-author .author .bio h4 a,
+.author-page .post-author .author .bio h4 a {
+  color: #ffffff;
+}
+.single-post .post-author .author .bio h4 a:hover,
+.page .post-author .author .bio h4 a:hover,
+.author-page .post-author .author .bio h4 a:hover {
+  color: #3986AA;
+}
 .single-post .post-author .author .bio p,
-.page .post-author .author .bio p {
+.page .post-author .author .bio p,
+.author-page .post-author .author .bio p {
   font-size: 1.5rem;
   line-height: 2.5rem;
   color: #979DA0;
   margin-bottom: 10px;
 }
+.single-post .post-author .author .bio p:first-of-type,
+.page .post-author .author .bio p:first-of-type,
+.author-page .post-author .author .bio p:first-of-type {
+  margin-top: 0;
+}
 .single-post .post-author .author .bio .location,
-.page .post-author .author .bio .location {
+.page .post-author .author .bio .location,
+.author-page .post-author .author .bio .location {
   display: block;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
 .single-post .post-author .author .bio .website,
-.page .post-author .author .bio .website {
+.page .post-author .author .bio .website,
+.author-page .post-author .author .bio .website {
   display: block;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
 .single-post .post-comments,
-.page .post-comments {
+.page .post-comments,
+.author-page .post-comments {
   max-width: 700px;
 }
 .single-post .post-comments hr,
-.page .post-comments hr {
+.page .post-comments hr,
+.author-page .post-comments hr {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-.page .post-content {
+.page .post-content,
+.page .author-posts {
   max-width: none;
 }
 /* ==========================================================================
@@ -736,23 +830,31 @@ article {
   }
   /* Post Page */
   .single-post .post-image,
-  .page .post-image {
+  .page .post-image,
+  .author-page .post-image {
     height: 450px;
   }
   .single-post .post-header h2,
-  .page .post-header h2 {
+  .page .post-header h2,
+  .author-page .post-header h2 {
     font-size: 4rem;
   }
   .single-post .post-body,
-  .page .post-body {
+  .page .post-body,
+  .author-page .post-body,
+  .single-post .author-body,
+  .page .author-body,
+  .author-page .author-body {
     padding-right: 350px;
   }
   .single-post .post-author h4,
-  .page .post-author h4 {
+  .page .post-author h4,
+  .author-page .post-author h4 {
     font-size: 2.5rem;
     height: 40px;
   }
-  .page .post-body {
+  .page .post-body,
+  .page .author-body {
     padding-right: 0;
   }
 }
@@ -762,29 +864,38 @@ article {
   }
   /* Post Page */
   .single-post .post-image,
-  .page .post-image {
+  .page .post-image,
+  .author-page .post-image {
     height: 400px;
   }
   .single-post .post-body,
-  .page .post-body {
+  .page .post-body,
+  .author-page .post-body,
+  .single-post .author-body,
+  .page .author-body,
+  .author-page .author-body {
     padding-right: 0;
   }
   .single-post .post-footer .author,
-  .page .post-footer .author {
+  .page .post-footer .author,
+  .author-page .post-footer .author {
     display: none;
   }
   .single-post .post-footer hr,
-  .page .post-footer hr {
+  .page .post-footer hr,
+  .author-page .post-footer hr {
     display: block;
   }
   .single-post .post-author,
-  .page .post-author {
+  .page .post-author,
+  .author-page .post-author {
     width: 100%;
     position: relative;
     margin: 50px 0;
   }
   .single-post .post-author .author .portrait,
-  .page .post-author .author .portrait {
+  .page .post-author .author .portrait,
+  .author-page .post-author .author .portrait {
     width: 300px;
     height: 300px;
     position: absolute;
@@ -792,22 +903,29 @@ article {
     left: 0;
   }
   .single-post .post-author .author .bio,
-  .page .post-author .author .bio {
+  .page .post-author .author .bio,
+  .author-page .post-author .author .bio {
     height: 220px;
     padding: 40px 40px 40px 340px;
   }
   .single-post .post-author .author .bio h4,
-  .page .post-author .author .bio h4 {
+  .page .post-author .author .bio h4,
+  .author-page .post-author .author .bio h4 {
     margin-bottom: 15px;
   }
   .single-post .post-author .author .bio p,
-  .page .post-author .author .bio p {
+  .page .post-author .author .bio p,
+  .author-page .post-author .author .bio p {
     margin-top: 15px;
     margin-bottom: 10px;
   }
   .single-post .post-comments hr,
-  .page .post-comments hr {
+  .page .post-comments hr,
+  .author-page .post-comments hr {
     display: none;
+  }
+  .author-page .post-author {
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -870,33 +988,50 @@ article {
   }
   /* Post Page */
   .single-post .post-image,
-  .page .post-image {
+  .page .post-image,
+  .author-page .post-image {
     height: 250px;
   }
+  .single-post .post-image.no-cover,
+  .page .post-image.no-cover,
+  .author-page .post-image.no-cover {
+    display: none;
+  }
   .single-post .post-header h2,
-  .page .post-header h2 {
+  .page .post-header h2,
+  .author-page .post-header h2 {
     font-size: 2.8rem;
   }
   .single-post .post-header,
   .page .post-header,
+  .author-page .post-header,
   .single-post .post-content,
   .page .post-content,
+  .author-page .post-content,
   .single-post .post-footer,
   .page .post-footer,
+  .author-page .post-footer,
   .single-post .post-comments,
-  .page .post-comments {
+  .page .post-comments,
+  .author-page .post-comments,
+  .single-post .author-posts,
+  .page .author-posts,
+  .author-page .author-posts {
     padding: 0 50px;
   }
   .single-post .post-author h3,
-  .page .post-author h3 {
+  .page .post-author h3,
+  .author-page .post-author h3 {
     padding: 0 50px;
   }
   .single-post .post-author .author .portrait,
-  .page .post-author .author .portrait {
+  .page .post-author .author .portrait,
+  .author-page .post-author .author .portrait {
     display: none;
   }
   .single-post .post-author .author .bio,
-  .page .post-author .author .bio {
+  .page .post-author .author .bio,
+  .author-page .post-author .author .bio {
     height: auto;
     padding: 40px 50px;
   }
@@ -941,37 +1076,56 @@ article {
   }
   /* Post Page */
   .single-post .post-image,
-  .page .post-image {
+  .page .post-image,
+  .author-page .post-image {
     height: 200px;
+  }
+  .single-post .post-image.no-cover,
+  .page .post-image.no-cover,
+  .author-page .post-image.no-cover {
+    display: none;
   }
   .single-post .post-header,
   .page .post-header,
+  .author-page .post-header,
   .single-post .post-content,
   .page .post-content,
+  .author-page .post-content,
   .single-post .post-footer,
-  .page .post-footer {
+  .page .post-footer,
+  .author-page .post-footer,
+  .single-post .author-posts,
+  .page .author-posts,
+  .author-page .author-posts {
     margin-bottom: 40px;
   }
   .single-post .post-header,
   .page .post-header,
+  .author-page .post-header,
   .single-post .post-content,
   .page .post-content,
+  .author-page .post-content,
   .single-post .post-footer,
   .page .post-footer,
+  .author-page .post-footer,
   .single-post .post-comments,
-  .page .post-comments {
+  .page .post-comments,
+  .author-page .post-comments {
     padding: 0 20px;
   }
   .single-post .post-author h3,
-  .page .post-author h3 {
+  .page .post-author h3,
+  .author-page .post-author h3 {
     padding: 0 20px;
   }
   .single-post .post-author .author .portrait,
-  .page .post-author .author .portrait {
+  .page .post-author .author .portrait,
+  .author-page .post-author .author .portrait {
     display: none;
   }
   .single-post .post-author .author .bio,
-  .page .post-author .author .bio {
+  .page .post-author .author .bio,
+  .author-page .post-author .author .bio {
     height: auto;
     padding: 30px 20px;
   }

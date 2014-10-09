@@ -354,14 +354,25 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 main {
-	background: #ffffff;
+		background: #ffffff;
 }
 
 .pane {
-	width: 100%;
-	max-width: 100%;
-	padding-top: 80px;
-	padding-bottom: 80px;
+		width: 100%;
+		max-width: 100%;
+		padding-top: 80px;
+		padding-bottom: 80px;
+}
+
+.author-page {
+		.pane {
+				padding-top: 40px;
+		}
+		
+		h2 {
+			padding-bottom: 20px;
+			text-align: center;
+		}
 }
 
 .strip {
@@ -393,6 +404,19 @@ article {
 		height: 400px;
 		background-position: center;
 		background-size: cover;
+			
+		&.no-cover {
+			display: none;
+	
+		}
+	}
+	
+	.author-thumb {
+	    width: 24px;
+	    height: 24px;
+	    float: left;
+	    margin-right: 9px;
+	    border-radius: 100%;
 	}
 	
 	&:last-child {
@@ -402,7 +426,8 @@ article {
 	.post-header {
 		padding: 20px 0 0 0;
 	
-		h2 {
+		h2,
+		h3 {
 			margin-bottom: 10px;
 			font-size: 3rem;
 			color: #3A4145;
@@ -430,18 +455,36 @@ article {
 	}
 }
 
+.author-page .post-preview {
+		margin: 0 auto 50px;
+}
+
 /* ==========================================================================
    Single Post - When you click on an individual post
    ========================================================================== */
    
 .single-post,
-.page {
+.page,
+.author-page {
    
 	.post-image {
 		height: 600px;
 		overflow: hidden;
 		background-position: center;
 		background-size: cover;
+		
+		&.no-cover {
+			display: none;
+	
+		}
+	}
+	
+	&.author-page .post-header {
+		margin-bottom: 0;
+		
+			h2 {
+				margin-bottom: 10px;
+			}
 	}
 	   
 	.post-header {
@@ -457,11 +500,13 @@ article {
 		}
 	}
 	
-	.post-body {
+	.post-body,
+	.author-body {
 		position: relative;
 	}
 	
-	.post-content {
+	.post-content,
+	.author-posts {
 		max-width: 700px;
 		
 		p:first-of-type {
@@ -552,6 +597,14 @@ article {
 					line-height: 3rem;
 					margin-bottom: 20px;
 					font-weight: 600;
+					
+					a {
+						color: #ffffff;
+						
+						&:hover {
+						    color: #3986AA;
+						}
+					}
 				}
 				
 				p {
@@ -559,6 +612,10 @@ article {
 					line-height: 2.5rem;
 					color: #979DA0;
 					margin-bottom: 10px;
+					
+					&:first-of-type {
+						margin-top: 0;
+					}
 				}
 				
 				.location {
@@ -586,7 +643,8 @@ article {
 	}
 }
 
-.page .post-content {
+.page .post-content,
+.page .author-posts {
 	max-width: none;
 }
 
@@ -848,7 +906,8 @@ article {
 	/* Post Page */
 	
 	.single-post,
-	.page {
+	.page,
+	.author-page {
 		.post-image {
 			height: 450px;
 		}
@@ -857,7 +916,8 @@ article {
 			font-size: 4rem;
 		}
 		
-		.post-body {
+		.post-body,
+		.author-body {
 			padding-right: 350px;
 		}
 		
@@ -867,7 +927,8 @@ article {
 		}
 	}
 	
-	.page .post-body {
+	.page .post-body,
+	.page .author-body {
 		padding-right: 0;
 	}
 }
@@ -882,13 +943,15 @@ article {
 	/* Post Page */
 	
 	.single-post,
-	.page {
+	.page,
+	.author-page {
 	
 		.post-image {
 			height: 400px;
 		}
 		
-		.post-body {
+		.post-body,
+		.author-body {
 			padding-right: 0;
 		}
 		
@@ -936,6 +999,10 @@ article {
 		.post-comments hr {
 			display: none;
 		}
+	}
+	
+	.author-page .post-author {
+		margin-top: 0;
 	}
 }
 
@@ -1024,10 +1091,15 @@ article {
     /* Post Page */
     
     .single-post,
-    .page {
+    .page,
+    .author-page {
     	
     	.post-image {
     		height: 250px;
+    		
+    		&.no-cover {
+    			display: none;
+    		}
     	}
     
     	.post-header h2 {
@@ -1037,7 +1109,8 @@ article {
 	    .post-header,
 	    .post-content,
 	    .post-footer,
-	    .post-comments {
+	    .post-comments,
+	    .author-posts {
 	    	padding: 0 50px;
 	    }
 	    
@@ -1120,14 +1193,20 @@ article {
 	/* Post Page */
 	
 	.single-post,
-	.page {
+	.page,
+	.author-page {
 		.post-image {
 			height: 200px;
+			
+			&.no-cover {
+				display: none;
+			}
 		}
 		
 		.post-header,
 		.post-content,
-		.post-footer {
+		.post-footer,
+		.author-posts {
 			margin-bottom: 40px;
 		}
 		
