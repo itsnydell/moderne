@@ -21,12 +21,11 @@
             {{#foreach posts}}
 
             <article class="post-preview {{post_class}}">
-                <div class="post-image">
-                    {{content words="0"}}
+                <div class="post-image {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
                 </div>
                 <header class="post-header">
                     <a href="{{url}}"><h2 class="post-title">{{{title}}}</h2></a>
-                    <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags seperator=" • " prefix="on "}}</span>
+                    <span class="post-meta">{{author}} on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags seperator=" • " prefix="on "}}</span>
                 </header>
                 <section class="post-excerpt">
                     <p>{{excerpt}}&hellip;</p>
