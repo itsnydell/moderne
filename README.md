@@ -50,3 +50,14 @@ Find and remove the following from the post.hbs file:
 ![](https://raw.githubusercontent.com/itsnydell/moderne/master/screenshot-post.jpg)
 
 ![](https://raw.githubusercontent.com/itsnydell/moderne/master/screenshot-post-lower.jpg)
+
+
+## Changelog
+
+#### Release 2.0.0
+
+* Added author page
+* Updated the post-images to use the new built-in ghost feature
+* Updated code to reflect changes in the Casper theme
+* Added author name to the homepage
+* Linked the author name on post pages to the author's page
