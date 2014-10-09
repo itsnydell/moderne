@@ -26,26 +26,6 @@
         casperFullImg();
         $(window).smartresize(casperFullImg);
 
-        // Setup post images
-        $(".post-preview").find(".post-image").each(function() {
-          if($(this).find("img").length != 0){
-            var postImage = $(this).find("img").attr("src");
-            $(this).html("");
-            $(this).css("background-image","url('"+postImage+"')")
-          } else {
-            $(this).remove();
-          }
-        });
-
-        // single post header image
-        if($(".single-post .post-content p:first img").length != 0){
-            var postImage = $(".single-post .post-content p:first img").attr("src");
-            $(".single-post .post-content p:first").remove();
-            $(".post-image").css("background-image","url('"+postImage+"')");
-        } else {
-          $(".single-post .post-image").remove();
-        }
-
     });
 
 }(jQuery));
