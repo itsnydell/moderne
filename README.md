@@ -18,7 +18,7 @@ Please let me know if you use this theme so I could feature you as an live blog!
 
 ### Post Header Images
 
-To enable post header images, you must place the desired image as the FIRST item in a blog post. No text should be above the image. This will enable large post header images as seen in the screenshots. 
+To enable post header images, use the built in post images feature. 
 
 ### Disqus
 
