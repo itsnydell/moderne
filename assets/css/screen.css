@@ -333,6 +333,9 @@ main {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.author-page {
+  min-height: 800px;
+}
 .author-page .pane {
   padding-top: 40px;
 }
