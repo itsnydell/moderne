@@ -1,4 +1,6 @@
 # Moderne
+**!! This theme is no longer maintained !!**
+
 ![](https://ga-beacon.appspot.com/UA-68802128-1/moderne/readme?pixel)
 
 A [Ghost](http://github.com/tryghost/ghost/) theme.
